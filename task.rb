@@ -7,32 +7,33 @@ class Task
     @description = description
     @status = "incomplete"
   end
-  # method to get title (getter)
+
+  # get title (getter)
   def title
     @title
   end
-  # method to get description (getter)
+
+  # get description (getter)
   def description
     @description
   end
-  # method to get status (getter)
+
+  # get status (getter)
   def status
     @status
   end
-  # method change task status to finished
+
+  # change task status to finished
   def done
     @status = "finished"
   end
-  # method to print the overall status of a task
+
+  # get the overall status of a task
   def print_status
     if @status == "incomplete"
-      "Title: #{@title} / Description: #{@description}"
+      "Type: #{self.class.to_s} / Title: #{@title} / Description: #{@description}"
     else
-      "Title: #{@title} / Description: #{@description} / Status: #{@status}"
+      "Type: #{self.class.to_s} / Title: #{@title} / Description: #{@description} / Status: #{@status}"
     end
   end
-  # # method to add a task to a task list
-  # def add_to_list(list)
-  #   list <<
-  # end
 end
