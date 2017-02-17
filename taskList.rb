@@ -1,4 +1,4 @@
-# require_relative 'task'
+require_relative 'task'
 
 class TaskList
   def initialize
