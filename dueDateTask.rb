@@ -18,10 +18,9 @@ class DueDateTask < Task
 
   # get the overall status of a task
   def print_status
-    if @status == "incomplete"
-      "Type: #{self.class.to_s} / Title: #{@title} / Description: #{@description} / Due Date: #{self.due_date.strftime('%m-%d-%Y')}"
-    else
-      "Type: #{self.class.to_s} / Title: #{@title} / Description: #{@description} / Status: #{@status}"
+    text = "Type: #{self.class.to_s} / Title: #{@title} / Description: #{@description} / Status: #{@status}"
+    if @due_date != nil
+      text += " / Due Date: #{self.due_date.strftime('%m-%d-%Y')}"
     end
   end
 end

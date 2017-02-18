@@ -21,9 +21,9 @@ describe DueDateTask do
   it "has to be able to print with lables and values" do
     duedatetask = DueDateTask.new("title", "description")
     duedatetask.set_due_date(2,16,2017)
-    expect(duedatetask.print_status).to eq("Type: DueDateTask / Title: title / Description: description / Due Date: 02-16-2017")
+    expect(duedatetask.print_status).to eq("Type: DueDateTask / Title: title / Description: description / Status: incomplete / Due Date: 02-16-2017")
     expect(duedatetask.done).to eq("finished")
-    expect(duedatetask.print_status).to eq("Type: DueDateTask / Title: title / Description: description / Status: finished")
+    expect(duedatetask.print_status).to eq("Type: DueDateTask / Title: title / Description: description / Status: finished / Due Date: 02-16-2017")
   end
 
 end
